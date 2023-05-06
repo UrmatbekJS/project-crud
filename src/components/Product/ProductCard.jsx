@@ -10,7 +10,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const ProductCard = () => {
-  //   const { products, getProducts, deleteProduct } = useContext(productContext);
+  const { products, getProducts, deleteProduct } = useContext(productContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
@@ -20,7 +20,7 @@ const ProductCard = () => {
   }, [search]);
 
   useEffect(() => {
-    // getProducts();
+    getProducts();
   }, [searchParams]);
 
   return (
@@ -34,7 +34,7 @@ const ProductCard = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      {/* {products.map((item, index) => (
+      {products.map((item, index) => (
         <Card sx={{ maxWidth: 345, marginBottom: "20px" }} key={index}>
           <CardMedia
             sx={{ height: 140 }}
@@ -75,7 +75,7 @@ const ProductCard = () => {
             </Button>
           </CardActions>
         </Card>
-      ))} */}
+      ))}
     </div>
   );
 };

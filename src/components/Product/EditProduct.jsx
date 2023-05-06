@@ -60,23 +60,23 @@ const EditProduct = () => {
           <TextField
             style={{ margin: "10px 0" }}
             type="text"
-            name="name"
+            name="description"
             value={productToEdit.description}
             onChange={handleInp}
             placeholder="Описание"
-          />{" "}
+          />
           <TextField
             style={{ margin: "10px 0" }}
             type="text"
-            name="name"
+            name="price"
             value={productToEdit.price}
             onChange={handleInp}
             placeholder="Цена"
-          />{" "}
+          />
           <TextField
             style={{ margin: "10px 0" }}
             type="text"
-            name="name"
+            name="image"
             value={productToEdit.image}
             onChange={handleInp}
             placeholder="Картинка"
@@ -84,7 +84,7 @@ const EditProduct = () => {
           <TextField
             style={{ margin: "10px 0" }}
             type="text"
-            name="name"
+            name="type"
             value={productToEdit.type}
             onChange={handleInp}
             placeholder="Тип"

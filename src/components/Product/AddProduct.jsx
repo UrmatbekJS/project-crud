@@ -36,7 +36,7 @@ const AddProduct = () => {
 
   return (
     <Container>
-      <h2>Add Product</h2>
+      <h2 style={{ margin: "30px 0" }}>Страница для добавления продуктов</h2>
       <div
         style={{
           display: "flex",
@@ -56,15 +56,15 @@ const AddProduct = () => {
         <TextField
           style={{ margin: "10px 0" }}
           type="text"
-          name="name"
+          name="description"
           value={product.description}
           onChange={handleAddProduct}
-          placeholder="Описвние"
+          placeholder="Описание"
         />
         <TextField
           style={{ margin: "10px 0" }}
           type="text"
-          name="name"
+          name="price"
           value={product.price}
           onChange={handleAddProduct}
           placeholder="Цена"
@@ -72,7 +72,7 @@ const AddProduct = () => {
         <TextField
           style={{ margin: "10px 0" }}
           type="text"
-          name="name"
+          name="image"
           value={product.image}
           onChange={handleAddProduct}
           placeholder="Картинка"
@@ -80,7 +80,7 @@ const AddProduct = () => {
         <TextField
           style={{ margin: "10px 0" }}
           type="text"
-          name="name"
+          name="type"
           value={product.type}
           onChange={handleAddProduct}
           placeholder="Тип"

@@ -7,12 +7,12 @@ export const productContext = createContext();
 const INIT_STATE = { products: [], oneProduct: null };
 
 const reducer = (state, action) => {
-  switch (action.key) {
+  switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
     case "GET_ONE_PRODUCT":
-      return { ...state, products: action.payload };
+      return { ...state, oneProduct: action.payload };
 
     default:
       return state;
@@ -61,7 +61,7 @@ const ProductContextProvider = ({ children }) => {
     getOneProduct,
     deleteProduct,
     saveEditedProduct,
-    // products: state.products,
+    products: state.products,
     oneProduct: state.oneProduct,
   };
   return (
